@@ -14,7 +14,7 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
+/* ========================== common ====================== */
 a {
   text-decoration: none;
 }
@@ -47,6 +47,18 @@ a {
   max-width: calc(100% - 48px);
   margin-left: auto;
   margin-right: auto;
+}
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+.break-all {
+  word-break: break-all;
 }
 /* ----------------------------------header--------------------------------------- */
 .header {
@@ -277,6 +289,7 @@ a {
   gap: 30px;
 }
 .popular .courses-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
